@@ -57,8 +57,21 @@ public class ContaBanco {
         this.status = status;
     }
 
-    public void abrirConta(){
+    public void abrirConta(String tipo){
+        tipo = tipo;
+        status = true;
 
+        if (tipo == "CC"){
+            saldo = 50;
+            System.out.println("Conta Corrente aberta com sucesso!");
+        }
+        else if (tipo == "CP") {
+            saldo = 150;
+            System.out.println("Conta Poupança aberta com sucesso!");
+        }
+        else {
+            System.out.println("Infome um valor válido!");
+        }
     }
 
     public void fecharConta(){
