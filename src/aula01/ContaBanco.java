@@ -96,8 +96,18 @@ public class ContaBanco {
         }
     }
 
-    public void sacar(){
-
+    public void sacar(double valor){
+        if (status){
+            if (saldo > 0){
+                saldo = saldo - valor;
+            }
+            else {
+                System.out.println("Saldo insuficiente!");
+            }
+        }
+        else {
+            System.out.println("Conta fechada! Não é possível sacar");
+        }
     }
 
     public void pagarMensal(){
