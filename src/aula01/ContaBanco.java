@@ -119,7 +119,7 @@ public class ContaBanco {
     }
 
     public void pagarMensal(){
-        double mensalidade;
+        double mensalidade = 0;
 
         if (this.getTipo() == "CC"){
             mensalidade = 12;
