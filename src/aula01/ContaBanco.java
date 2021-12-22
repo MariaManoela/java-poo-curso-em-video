@@ -57,6 +57,15 @@ public class ContaBanco {
         this.status = status;
     }
 
+    public void estadoAtual(){
+        System.out.println("==================================");
+        System.out.println("Conta: " + this.getNumeroConta());
+        System.out.println("Tipo: " + this.getTipo());
+        System.out.println("Dono: " + this.getDono());
+        System.out.println("Saldo: R$" + this.getSaldo());
+        System.out.println("Status: " + this.getStatus());
+    }
+
     public void abrirConta(String tipo){
         this.setTipo(tipo);
         this.setStatus(true);
