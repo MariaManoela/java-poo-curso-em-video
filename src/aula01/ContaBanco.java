@@ -87,8 +87,13 @@ public class ContaBanco {
         }
     }
 
-    public void depositar(){
-
+    public void depositar(double valor){
+        if (status){
+            saldo = saldo + valor;
+        }
+        else {
+            System.out.println("Conta fechada! Não é possível depositar");
+        }
     }
 
     public void sacar(){
