@@ -111,6 +111,22 @@ public class ContaBanco {
     }
 
     public void pagarMensal(){
+        double mensalidade;
 
+        if (tipo == "CC"){
+            mensalidade = 12;
+        }
+        else {
+            mensalidade = 20;
+        }
+
+        if (status){
+            if (saldo >= mensalidade) {
+                saldo = saldo - mensalidade;
+            }
+            else {
+                System.out.println("Saldo insuficiente!");
+            }
+        }
     }
 }
