@@ -75,7 +75,16 @@ public class ContaBanco {
     }
 
     public void fecharConta(){
-
+        if (saldo > 0){
+            System.out.println("Conta com dinheiro");
+        }
+        else if (saldo < 0){
+            System.out.println("Conta em débito");
+        }
+        else {
+            status = false;
+            System.out.println("Conta encerrada com sucesso!");
+        }
     }
 
     public void depositar(){
