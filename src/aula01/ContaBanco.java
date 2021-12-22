@@ -56,4 +56,24 @@ public class ContaBanco {
     public void setStatus(boolean status) {
         this.status = status;
     }
+
+    public void abrirConta(){
+
+    }
+
+    public void fecharConta(){
+
+    }
+
+    public void depositar(){
+
+    }
+
+    public void sacar(){
+
+    }
+
+    public void pagarMensal(){
+
+    }
 }
