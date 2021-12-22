@@ -7,5 +7,13 @@ public class ContaBanco {
     private double saldo;
     private boolean status;
 
+    public ContaBanco(){}
 
+    public ContaBanco(int numeroConta, String tipo, String dono, double saldo, boolean status) {
+        this.numeroConta = numeroConta;
+        this.tipo = tipo;
+        this.dono = dono;
+        this.saldo = saldo;
+        this.status = status;
+    }
 }
