@@ -1,6 +1,10 @@
 package aula02;
 
 public class ControleRemoto implements Controlador{
+    private int volume;
+    private boolean ligado;
+    private boolean tocando;
+
     @Override
     public void ligar() {
 
