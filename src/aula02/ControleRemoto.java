@@ -5,6 +5,12 @@ public class ControleRemoto implements Controlador{
     private boolean ligado;
     private boolean tocando;
 
+    public ControleRemoto() {
+        this.volume = 50;
+        this.ligado = false;
+        this.tocando = false;
+    }
+
     @Override
     public void ligar() {
 
