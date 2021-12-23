@@ -68,21 +68,20 @@ public class Lutador {
     }
 
     public void setCategoria() {
-        this.categoria = categoria;
         if (peso < 52.2){
-            categoria = "Inválido!";
+            this.categoria = "Inválido!";
         }
         else if (peso <= 70.3){
-            categoria = "Leve";
+            this.categoria = "Leve";
         }
         else if (peso <= 83.9){
-            categoria = "Médio";
+            this.categoria = "Médio";
         }
         else if (peso <= 120.2){
-            categoria = "Pesado";
+            this.categoria = "Pesado";
         }
         else {
-            categoria = "Inválido!";
+            this.categoria = "Inválido!";
         }
     }
 
@@ -108,5 +107,38 @@ public class Lutador {
 
     public void setEmpates(int empates) {
         this.empates = empates;
+    }
+
+    public void apresentar() {
+        System.out.println("================APRESENTAÇÃO================");
+        System.out.println("Lutador: " + this.getNome());
+        System.out.println("Origem: " + this.getNacionalidade());
+        System.out.println(this.getIdade() + " anos");
+        System.out.println(this.getAltura() + "m de altura");
+        System.out.println("Pesando: " + this.getPeso() + "Kg");
+        System.out.println("Ganhou: " + this.getVitorias());
+        System.out.println("Perdeu: " + this.getDerrotas());
+        System.out.println("Empatou: " + this.getEmpates());
+    }
+
+    public void status() {
+        System.out.println("================STATUS================");
+        System.out.println(this.getNacionalidade());
+        System.out.println("É um peso: " + this.getCategoria());
+        System.out.println(this.getVitorias() + " vitórias");
+        System.out.println(this.getDerrotas() + " derrotas");
+        System.out.println(this.getEmpates() + " empates");
+    }
+
+    public void ganharLuta() {
+        this.setVitorias(this.getVitorias() + 1);
+    }
+
+    public void perderLuta() {
+        this.setDerrotas(this.getDerrotas() + 1);
+    }
+
+    public void empatarLuta() {
+        this.setEmpates(this.getEmpates() + 1);
     }
 }
