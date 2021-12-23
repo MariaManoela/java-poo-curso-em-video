@@ -47,12 +47,13 @@ public class ControleRemoto implements Controlador{
 
     @Override
     public void abrirMenu() {
+        System.out.println("==========MENU==========");
         System.out.println("Está ligado? " + this.isLigado());
         System.out.println("Está tocando? " + this.isTocando());
         System.out.print("Volume: " + this.getVolume());
 
-        for (int i = 0; i <= this.getVolume(); i += 10){
-            System.out.println("|");
+        for (int i = 0; i < this.getVolume(); i += 10){
+            System.out.print("|");
         }
     }
 
@@ -66,12 +67,18 @@ public class ControleRemoto implements Controlador{
         if (this.isLigado()){
             this.setVolume(this.getVolume() + 5);
         }
+        else {
+            System.out.println("TV desligada!");
+        }
     }
 
     @Override
     public void menosVolume() {
         if (this.isLigado()){
             this.setVolume(this.getVolume() - 5);
+        }
+        else {
+            System.out.println("TV desligada!");
         }
     }
 
@@ -80,12 +87,18 @@ public class ControleRemoto implements Controlador{
         if (this.isLigado() && this.getVolume() > 0){
             this.setVolume(0);
         }
+        else {
+            System.out.println("TV desligada!");
+        }
     }
 
     @Override
     public void desligarMudo() {
         if (this.isLigado() && this.getVolume() == 0){
             this.setVolume(50);
+        }
+        else {
+            System.out.println("TV desligada!");
         }
     }
 
@@ -94,12 +107,18 @@ public class ControleRemoto implements Controlador{
         if (this.isLigado() && !(this.isTocando())){
             this.setTocando(true);
         }
+        else {
+            System.out.println("TV desligada!");
+        }
     }
 
     @Override
     public void pause() {
         if (this.isLigado() && this.isTocando()){
             this.setTocando(false);
+        }
+        else {
+            System.out.println("TV desligada!");
         }
     }
 }
