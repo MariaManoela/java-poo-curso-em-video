@@ -17,7 +17,8 @@ public class Main {
         l[5] = new Lutador("Nerdaart", "EUA", 30, 1.81f,
                                     105.7f, 12, 2, 4);
 
-        l[3].ganharLuta();
-        l[3].status();
+        Luta uec01 = new Luta();
+        uec01.marcarLuta(l [4], l[5]);
+        uec01.lutar();
     }
 }
