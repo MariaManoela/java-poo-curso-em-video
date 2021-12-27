@@ -13,6 +13,7 @@ public class Luta {
             this.aprovada = true;
             this.desafiado = l1;
             this.desafiante = l2;
+            System.out.println("Luta marcada com sucesso!");
         } else {
             this.aprovada = false;
             this.desafiado = null;
